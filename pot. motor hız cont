@@ -1,0 +1,16 @@
+from gpiozero import MCP3008, Motor 
+
+pot = MCP3008(chanel=0)
+motor = Motor(4, 14)
+
+while True:
+    print(pot.value)
+    if pot.value<=200 
+        motor.backward()
+    elif pot.value>200 & pot.value<501
+        motor.stop()
+    else pot.value>=500 
+    
+#0 - 200 ters 
+#200 - 500 dur 
+#500 1024 hız
