@@ -1,0 +1,31 @@
+#hareket sensörü
+#kamera 
+#hareket algılandığında ikaz ledi yaancak kamera görüntü çekecek 20dk boyunca buzzer ses çıkartacak led sönmesi için butona basmak gerekcek.  
+
+from gpiozero import MotionSensor, LED, Button, Buzzer
+from picamera import Picamera 
+from datetime import pause
+from signal import pause 
+
+sensor = MotionSensor(4)
+led = LED(16)
+button = Button(2)
+camera = PiCamera()
+pir.wait_for_no_motion()
+
+def capture(): 
+    timestamp = datetime.now().isoformat()
+    camera.capture('/home/pi/%s.jpg' %timestamp)
+
+while True: 
+    pir.wait_for_motion()
+    sensor.when_motion = led.on
+    sensor.when_motion = buzzer.on
+    buzzer.beep = time(60)
+    sensor.when_motion = capture 
+    
+    if(button.when_pressed = led.off): 
+        break
+    else:
+        continue
+    
