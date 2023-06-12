@@ -10,6 +10,7 @@ while True:
     elif pot.value>200 & pot.value<501
         motor.stop()
     else pot.value>=500 
+        motor.forward()
     
 #0 - 200 ters 
 #200 - 500 dur 
